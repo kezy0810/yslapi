@@ -1,5 +1,6 @@
 package com.qkl.tfcc.api.common;
 
+import java.io.File;
 import java.util.Date;
 
 import com.qkl.util.help.DateUtil;
@@ -32,4 +33,9 @@ public class Constant {
 	public static final String LOCKED ="1";
 	public static final String UN_LOCKED ="0";
 	public static final Date  SYS_BUILDDATE =  DateUtil.getDateByString("2016-08-10");
+	
+	public static final int PIC_HEAD_HEIGHT = 100;//用户头像高
+    public static final int PIC_HEAD_WIDTH = 100;//用户头像宽
+    public static final String PIC_HEAD_PATH = "uploadfile"+File.separator+"img"+File.separator+"head/";//头像图片
+    public static final String PIC_QRCODE_PATH = "uploadfile"+File.separator+"img"+File.separator+"qrcode/";//二维码图片
 }

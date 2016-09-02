@@ -1,5 +1,7 @@
 package com.qkl.tfcc.api.service.testUser.api;
 
+import java.util.List;
+
 import com.qkl.tfcc.api.po.TestUser;
 
 
@@ -22,4 +24,6 @@ public interface TestUserService {
 	 * @create date 2015年4月15日
 	 */ 
 	public TestUser queryTestUserByUserId(long testUserId);
+	
+	public List<TestUser> queryTestUserList();
 }

@@ -1,7 +1,7 @@
 package com.qkl.tfcc.api.service.sys.api;
 
 import java.util.List;
-
+import java.util.Map;
 import com.qkl.tfcc.api.po.sys.SysGencode;
 
 public interface SysGenCodeService {
@@ -16,7 +16,7 @@ public interface SysGenCodeService {
 	 * 根据groupCode查询代码
 	 * @param groupId
 	 */
-	public List<SysGencode> findByGroupCode(String groupCode,String versionNo);
+	public List<Map<String, Object>> findByGroupCode(String groupCode,String versionNo);
 	
 	
 }

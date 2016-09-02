@@ -108,5 +108,22 @@ public interface UserService {
 	 */
 	public boolean modifyLockSmsStatus(String  phone,String status,Date locktime,String versionNo);
 	
-	
+	/**
+     * @author: zhangchunming
+     * @date: 2016年9月1日下午7:56:37
+     * @param: userCode
+     * @param: img_addrss
+     * @return boolean
+     */
+    public boolean modifyUserHeadPic(String userCode,String imgAddrss, String versionNo);
+    /**
+     * @describe:查询用户详细信息
+     * @author: zhangchunming
+     * @date: 2016年9月2日上午9:56:51
+     * @params: @param userCode
+     * @params: @param versionNo
+     * @params: @return
+     * @return: UserDetail
+     */
+	public UserDetail findUserDetailByUserCode(String userCode,String versionNo);
 }

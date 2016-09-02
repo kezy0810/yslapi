@@ -27,8 +27,8 @@
 	http://www.springframework.org/schema/integration/stream/spring-integration-stream-2.1.xsd 
 	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
 	
-	<!-- <dubbo:reference id="testUserService" interface="com.qkl.tfcc.api.service.testUser.api.TestUserService" version="1.0.0" />
+	<dubbo:reference id="testUserService" interface="com.qkl.tfcc.api.service.testUser.api.TestUserService" version="1.0.0" />
 	<dubbo:reference id="searchService" interface="com.qkl.tfcc.api.service.search.api.SearchService"  version="1.0.0" timeout="120000"/>
 	<dubbo:reference id="sourceService" interface="com.qkl.tfcc.api.service.source.api.SourceService"  version="1.0.0" />
-	<dubbo:reference id="testService" interface="com.qkl.tfcc.api.service.mytest.api.TestService"  version="1.0.0" /> -->
+	<dubbo:reference id="testService" interface="com.qkl.tfcc.api.service.mytest.api.TestService"  version="1.0.0" />
 </beans>

@@ -6,7 +6,7 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.qkl.tfcc.api.entity.PageData;
+import com.qkl.tfcc.api.entity.PageDataYC;
 import com.qkl.tfcc.api.entity.SearchCondition;
 import com.qkl.tfcc.api.entity.Table;
 import com.qkl.tfcc.api.po.SourceBean;
@@ -39,7 +39,7 @@ public interface SearchService {
 	 * @create author weigangpeng
 	 * @create date 2015年4月18日
 	 */
-	PageData queryData(SearchCondition condition);
+	PageDataYC queryData(SearchCondition condition);
 
 
 

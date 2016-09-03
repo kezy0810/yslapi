@@ -1,5 +1,7 @@
 package com.qkl.tfcc.api.entity;
 
+import com.qkl.util.help.pager.PageData;
+
 
 public class Page {
 	
@@ -14,6 +16,14 @@ public class Page {
 	
 
 	
+	public PageData getPd() {
+		return pd;
+	}
+
+	public void setPd(PageData pd) {
+		this.pd = pd;
+	}
+
 	public Page(){
 		try {
 			this.showCount = 10;
@@ -116,7 +126,7 @@ public class Page {
 			
 			//换页函数
 			sb.append("function nextPage(page){");
-			sb.append(" window.parent.jzts();");
+//			sb.append(" window.parent.jzts();");
 			sb.append("	if(true && document.forms[0]){\n");
 			sb.append("		var url = document.forms[0].getAttribute(\"action\");\n");
 			sb.append("		if(url.indexOf('?')>-1){url += \"&"+(entityOrField?"currentPage":"page.currentPage")+"=\";}\n");
@@ -141,7 +151,7 @@ public class Page {
 			
 			//调整每页显示条数
 			sb.append("function changeCount(value){");
-			sb.append(" window.parent.jzts();");
+//			sb.append(" window.parent.jzts();");
 			sb.append("	if(true && document.forms[0]){\n");
 			sb.append("		var url = document.forms[0].getAttribute(\"action\");\n");
 			sb.append("		if(url.indexOf('?')>-1){url += \"&"+(entityOrField?"currentPage":"page.currentPage")+"=\";}\n");
@@ -209,12 +219,6 @@ public class Page {
 		this.entityOrField = entityOrField;
 	}
 	
-	public PageData getPd() {
-		return pd;
-	}
-
-	public void setPd(PageData pd) {
-		this.pd = pd;
-	}
+	
 	
 }

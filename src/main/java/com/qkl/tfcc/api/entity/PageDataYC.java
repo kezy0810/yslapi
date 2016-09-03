@@ -16,14 +16,14 @@ import com.qkl.util.help.Page;
  * @date 2015年4月18日
  * @version v1.0
  */
-public class PageData extends Page {
+public class PageDataYC extends Page {
 
 	/**
 	 * 列表需要显示的数据
 	 */
 	private List data = null;
 	
-	public PageData() {
+	public PageDataYC() {
 		
 	}
 
@@ -37,7 +37,7 @@ public class PageData extends Page {
 	 * @param pageSize
 	 *            页大小
 	 */
-	public PageData(List data, int count, int currentPage, int pageSize) {
+	public PageDataYC(List data, int count, int currentPage, int pageSize) {
 		super(count, currentPage, pageSize);
 		this.data = data;
 	}

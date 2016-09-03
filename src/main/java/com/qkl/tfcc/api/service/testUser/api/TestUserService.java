@@ -2,7 +2,9 @@ package com.qkl.tfcc.api.service.testUser.api;
 
 import java.util.List;
 
+import com.qkl.tfcc.api.entity.Page;
 import com.qkl.tfcc.api.po.TestUser;
+import com.qkl.util.help.pager.PageData;
 
 
 /**测试用户的接口
@@ -25,5 +27,5 @@ public interface TestUserService {
 	 */ 
 	public TestUser queryTestUserByUserId(long testUserId);
 	
-	public List<TestUser> queryTestUserList();
+	public List<PageData> queryTestUserList(Page page);
 }

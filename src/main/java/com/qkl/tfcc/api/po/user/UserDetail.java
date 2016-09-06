@@ -22,8 +22,21 @@ public class UserDetail implements Serializable {
 	 * 手机
 	 */
 	private java.lang.String phone;
-		
+	
 	/**
+	 * 登陆账号
+	 */
+	private java.lang.String userName;
+		
+	public java.lang.String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(java.lang.String userName) {
+        this.userName = userName;
+    }
+
+    /**
 	 * 姓名
 	 */
 	private java.lang.String realName;

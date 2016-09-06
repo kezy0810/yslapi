@@ -31,9 +31,15 @@ public interface UserService {
 	public Map<String, Object> findLockSmsStatus(String phone,long second,String versionNo);
 	/**
 	 * 根据手机号查询用户
-	 * @param userCode
+	 * @param phone
 	 */
 	public User findbyPhone(String phone,String versionNo);
+	
+	/**
+     * 根据用户编码查询用户
+     * @param userCode
+     */
+	public User findUserByUserCode(String userCode);
 	
 	/**
 	 * 根据手机号查询用户
@@ -78,10 +84,17 @@ public interface UserService {
 	
 	/**
 	 * 修改密码
-	 * @param userCode
+	 * @param phone
 	 * @param password
 	 */
 	public boolean modifyPwd(String phone,String password,String versionNo);
+	
+	/**
+     * 修改密码
+     * @param userCode
+     * @param password
+     */
+    public boolean modifypwdByUserCode(String userCode,String password,String versionNo);
 	
 	/**
 	 * 修改手机

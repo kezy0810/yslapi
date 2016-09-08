@@ -5,40 +5,46 @@ import java.io.Serializable;
 
 
 
-public class AccLimitdef implements Serializable {
-
+public class MemberLimit implements Serializable {
 
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -1498364729603650211L;
+	private static final long serialVersionUID = -3633169138064083845L;
+
 
 	/**
 	 * id
 	 */
 	private java.lang.Integer id;
+
+	/**
+	 * 用户名
+	 */
+	private java.lang.String userCode;
 	
+
+	/**
+	 * 关联用户名
+	 */
+	private java.lang.String rela_usercode;
 	
 	/**
 	 * 账户编码
 	 */
 	private java.lang.String accNo;
 	
-	/**
-	 * 账户名称
-	 */
-	private java.lang.String accName;
 	
-	
-	/**
-	 * 账户类型
-	 */
-	private java.math.BigDecimal creditLimit;
 	/**
 	 * 账户类型
 	 */
 	private java.lang.String cuyType;
+	/**
+	 * 账户类型
+	 */
+	private java.math.BigDecimal creditLimit;
+	
 
 	
 	
@@ -46,6 +52,11 @@ public class AccLimitdef implements Serializable {
 	 * 描述
 	 */
 	private java.lang.String description;
+	
+	/**
+	 * 状态
+	 */
+	private java.lang.String status;
 	
 	
 	
@@ -67,12 +78,12 @@ public class AccLimitdef implements Serializable {
 	
 	
 
-	public java.lang.String getCuyType() {
-		return cuyType;
+	public java.lang.String getStatus() {
+		return status;
 	}
 
-	public void setCuyType(java.lang.String cuyType) {
-		this.cuyType = cuyType;
+	public void setStatus(java.lang.String status) {
+		this.status = status;
 	}
 
 	public java.lang.Integer getId() {
@@ -91,14 +102,31 @@ public class AccLimitdef implements Serializable {
 		this.accNo = accNo;
 	}
 
-	public java.lang.String getAccName() {
-		return accName;
+	
+
+	public java.lang.String getRela_usercode() {
+		return rela_usercode;
 	}
 
-	public void setAccName(java.lang.String accName) {
-		this.accName = accName;
+	public void setRela_usercode(java.lang.String rela_usercode) {
+		this.rela_usercode = rela_usercode;
 	}
 
+	public java.lang.String getUserCode() {
+		return userCode;
+	}
+
+	public void setUserCode(java.lang.String userCode) {
+		this.userCode = userCode;
+	}
+
+	public java.lang.String getCuyType() {
+		return cuyType;
+	}
+
+	public void setCuyType(java.lang.String cuyType) {
+		this.cuyType = cuyType;
+	}
 
 	public java.math.BigDecimal getCreditLimit() {
 		return creditLimit;
@@ -144,7 +172,6 @@ public class AccLimitdef implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((accName == null) ? 0 : accName.hashCode());
 		result = prime * result + ((accNo == null) ? 0 : accNo.hashCode());
 		result = prime * result
 				+ ((createTime == null) ? 0 : createTime.hashCode());
@@ -157,6 +184,11 @@ public class AccLimitdef implements Serializable {
 				+ ((modifyTime == null) ? 0 : modifyTime.hashCode());
 		result = prime * result
 				+ ((operator == null) ? 0 : operator.hashCode());
+		result = prime * result
+				+ ((rela_usercode == null) ? 0 : rela_usercode.hashCode());
+		result = prime * result + ((status == null) ? 0 : status.hashCode());
+		result = prime * result
+				+ ((userCode == null) ? 0 : userCode.hashCode());
 		return result;
 	}
 
@@ -168,12 +200,7 @@ public class AccLimitdef implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		AccLimitdef other = (AccLimitdef) obj;
-		if (accName == null) {
-			if (other.accName != null)
-				return false;
-		} else if (!accName.equals(other.accName))
-			return false;
+		MemberLimit other = (MemberLimit) obj;
 		if (accNo == null) {
 			if (other.accNo != null)
 				return false;
@@ -209,22 +236,41 @@ public class AccLimitdef implements Serializable {
 				return false;
 		} else if (!operator.equals(other.operator))
 			return false;
+		if (rela_usercode == null) {
+			if (other.rela_usercode != null)
+				return false;
+		} else if (!rela_usercode.equals(other.rela_usercode))
+			return false;
+		if (status == null) {
+			if (other.status != null)
+				return false;
+		} else if (!status.equals(other.status))
+			return false;
+		if (userCode == null) {
+			if (other.userCode != null)
+				return false;
+		} else if (!userCode.equals(other.userCode))
+			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("AccLimitdef [accNo=");
+		builder.append("MemberLimit [userCode=");
+		builder.append(userCode);
+		builder.append(", rela_usercode=");
+		builder.append(rela_usercode);
+		builder.append(", accNo=");
 		builder.append(accNo);
-		builder.append(", accName=");
-		builder.append(accName);
-		builder.append(", creditLimit=");
-		builder.append(creditLimit);
 		builder.append(", cuyType=");
 		builder.append(cuyType);
+		builder.append(", creditLimit=");
+		builder.append(creditLimit);
 		builder.append(", description=");
 		builder.append(description);
+		builder.append(", status=");
+		builder.append(status);
 		builder.append(", createTime=");
 		builder.append(createTime);
 		builder.append(", modifyTime=");

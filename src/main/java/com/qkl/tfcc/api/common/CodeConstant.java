@@ -153,5 +153,9 @@ public interface CodeConstant {
 	 * 支付密码错误次数已达上限
 	 */
 	public final short  PAY_CODE_MAX =-31;		
+	/**
+	 * 手机号格式错误
+	 */
+	public final short  MOBILE_ERROR =-32;		
 	
 }

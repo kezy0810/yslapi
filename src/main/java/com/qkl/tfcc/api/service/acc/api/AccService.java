@@ -96,7 +96,7 @@ public interface AccService {
      * @param versionNo 版本号
      * @return: void
      */
-    public Map<String,List> rewardTfcc(JSONArray jsonArray,String userCode,String versionNo);
+    public Map<String,String> rewardTfcc(JSONArray jsonArray,String userCode,String versionNo);
     /**
      * @describe:查询账户明细
      * @author: zhangchunming

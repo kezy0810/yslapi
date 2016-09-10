@@ -22,7 +22,7 @@ public class MemberLimit implements Serializable {
 	/**
 	 * 用户名
 	 */
-	private java.lang.String userCode;
+	private java.lang.String userCode ;
 	
 
 	/**
@@ -271,7 +271,7 @@ public class MemberLimit implements Serializable {
 		builder.append(description);
 		builder.append(", status=");
 		builder.append(status);
-		builder.append(", createTime=");
+		builder.append(",   createTime=");
 		builder.append(createTime);
 		builder.append(", modifyTime=");
 		builder.append(modifyTime);

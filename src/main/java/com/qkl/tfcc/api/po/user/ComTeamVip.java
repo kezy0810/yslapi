@@ -16,7 +16,7 @@ public class ComTeamVip implements Serializable{
 	private long rOutlets;//推荐网点数量
 	private String memberLevel;//会员级别
 	private Date regTime;//会员注册时间
-	private long memberAcc;//会员账号
+	private String memberAcc;//会员账号
 	private String referee;//推荐人
 	private long purchaseNum;//购买量
 	
@@ -27,7 +27,7 @@ public class ComTeamVip implements Serializable{
 		super();
 	}
 	public ComTeamVip(long rNum, long aNum, long bNum, long cNum,
-			long rOutlets, String memberLevel, Date regTime, long memberAcc,
+			long rOutlets, String memberLevel, Date regTime, String memberAcc,
 			String referee, long purchaseNum) {
 		super();
 		this.rNum = rNum;
@@ -83,10 +83,10 @@ public class ComTeamVip implements Serializable{
 	public void setRegTime(Date regTime) {
 		this.regTime = regTime;
 	}
-	public long getMemberAcc() {
+	public String getMemberAcc() {
 		return memberAcc;
 	}
-	public void setMemberAcc(long memberAcc) {
+	public void setMemberAcc(String memberAcc) {
 		this.memberAcc = memberAcc;
 	}
 	public String getReferee() {
@@ -111,7 +111,8 @@ public class ComTeamVip implements Serializable{
 		result = prime * result + (int) (aNum ^ (aNum >>> 32));
 		result = prime * result + (int) (bNum ^ (bNum >>> 32));
 		result = prime * result + (int) (cNum ^ (cNum >>> 32));
-		result = prime * result + (int) (memberAcc ^ (memberAcc >>> 32));
+		result = prime * result
+				+ ((memberAcc == null) ? 0 : memberAcc.hashCode());
 		result = prime * result
 				+ ((memberLevel == null) ? 0 : memberLevel.hashCode());
 		result = prime * result + (int) (purchaseNum ^ (purchaseNum >>> 32));
@@ -136,7 +137,10 @@ public class ComTeamVip implements Serializable{
 			return false;
 		if (cNum != other.cNum)
 			return false;
-		if (memberAcc != other.memberAcc)
+		if (memberAcc == null) {
+			if (other.memberAcc != null)
+				return false;
+		} else if (!memberAcc.equals(other.memberAcc))
 			return false;
 		if (memberLevel == null) {
 			if (other.memberLevel != null)

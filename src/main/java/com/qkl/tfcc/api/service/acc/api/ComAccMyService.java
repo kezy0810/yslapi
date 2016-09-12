@@ -13,20 +13,20 @@ public interface ComAccMyService {
 	 
 	 //查询TFCC的余额
 	 
-	public long findTB(String userCode);
+	public double findTB(String userCode);
 	
 	//查询JFFC的余额
 	
-	public long findJB(String userCode);
+	public double findJB(String userCode);
 	
 	//查询推荐会员奖励的TFCC
-	public long findReward(String userCode);
+	public double findReward(String userCode);
 		
 	//查询推荐网点奖励的TFCC
-	public long findWReward(String userCode);
+	public double findWReward(String userCode);
 		
 	//查询累奖励的TFCC
-	public long findTTReward(String userCode);
+	public double findTTReward(String userCode);
 	//查询推荐各级别会员所得奖励列表
 	
 	public List<PageData> findAll(Page page);

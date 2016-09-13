@@ -1,5 +1,6 @@
 package com.qkl.tfcc.api.service.acc.api;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -10,23 +11,23 @@ import com.qkl.util.help.pager.PageData;
 public interface ComAccMyService {
 
 	
-	 
+	
 	 //查询TFCC的余额
 	 
-	public double findTB(String userCode);
+	public BigDecimal findTB(String userCode);
 	
 	//查询JFFC的余额
 	
-	public double findJB(String userCode);
+	public BigDecimal findJB(String userCode);
 	
 	//查询推荐会员奖励的TFCC
-	public double findReward(String userCode);
+	public BigDecimal findReward(String userCode);
 		
 	//查询推荐网点奖励的TFCC
-	public double findWReward(String userCode);
+	public BigDecimal findWReward(String userCode);
 		
 	//查询累奖励的TFCC
-	public double findTTReward(String userCode);
+	public BigDecimal findTTReward(String userCode);
 	//查询推荐各级别会员所得奖励列表
 	
 	public List<PageData> findAll(Page page);

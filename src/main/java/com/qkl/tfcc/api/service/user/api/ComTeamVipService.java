@@ -16,10 +16,5 @@ public interface ComTeamVipService {
 	public ComTeamVip findcount(String userCode);
 	//查询各类会员信息列表
 	public List<PageData> findVipList(Page page);
-	/**
-	 * 查询条数
-	 * @param mp
-	 * @return
-	 */
-	public int findCount(Map<String, Object> mp);
+	
 }

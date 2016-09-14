@@ -51,7 +51,11 @@ public class UnfreezeDetail implements Serializable {
 	/**
 	 * 状态
 	 */
-	private java.lang.String status;	
+	private java.lang.String status;
+	/**
+	 * 系统标识
+	 */
+	private java.lang.String syscode;
 	/**
 	 * 创建时间
 	 */
@@ -70,6 +74,14 @@ public class UnfreezeDetail implements Serializable {
 	
 	
 	
+
+	public java.lang.String getSyscode() {
+		return syscode;
+	}
+
+	public void setSyscode(java.lang.String syscode) {
+		this.syscode = syscode;
+	}
 
 	public java.lang.String getSubAccno() {
 		return subAccno;
@@ -192,6 +204,7 @@ public class UnfreezeDetail implements Serializable {
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result
 				+ ((subAccno == null) ? 0 : subAccno.hashCode());
+		result = prime * result + ((syscode == null) ? 0 : syscode.hashCode());
 		result = prime * result
 				+ ((targetSystem == null) ? 0 : targetSystem.hashCode());
 		result = prime * result
@@ -249,6 +262,11 @@ public class UnfreezeDetail implements Serializable {
 				return false;
 		} else if (!subAccno.equals(other.subAccno))
 			return false;
+		if (syscode == null) {
+			if (other.syscode != null)
+				return false;
+		} else if (!syscode.equals(other.syscode))
+			return false;
 		if (targetSystem == null) {
 			if (other.targetSystem != null)
 				return false;
@@ -298,6 +316,8 @@ public class UnfreezeDetail implements Serializable {
 		builder.append(targetSystem);
 		builder.append(", status=");
 		builder.append(status);
+		builder.append(", syscode=");
+		builder.append(syscode);
 		builder.append(", createTime=");
 		builder.append(createTime);
 		builder.append(", modifyTime=");

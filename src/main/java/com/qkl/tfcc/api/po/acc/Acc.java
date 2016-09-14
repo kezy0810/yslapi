@@ -42,6 +42,10 @@ public class Acc implements Serializable {
 	 * 最近一次计算日期
 	 */
 	private java.util.Date lastCaldate;
+	/**
+	 * 系统标识
+	 */
+	private java.lang.String syscode;
 	
 	/**
 	 * 创建时间
@@ -60,6 +64,17 @@ public class Acc implements Serializable {
 	
 	
 	private java.lang.Integer versionId; 
+	
+	
+	
+
+	public java.lang.String getSyscode() {
+		return syscode;
+	}
+
+	public void setSyscode(java.lang.String syscode) {
+		this.syscode = syscode;
+	}
 
 	public java.lang.Integer getId() {
 		return id;
@@ -160,6 +175,7 @@ public class Acc implements Serializable {
 				+ ((createTime == null) ? 0 : createTime.hashCode());
 		result = prime * result
 				+ ((frozeAmnt == null) ? 0 : frozeAmnt.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result
 				+ ((lastCaldate == null) ? 0 : lastCaldate.hashCode());
 		result = prime * result
@@ -168,6 +184,7 @@ public class Acc implements Serializable {
 				+ ((operator == null) ? 0 : operator.hashCode());
 		result = prime * result
 				+ ((subAccno == null) ? 0 : subAccno.hashCode());
+		result = prime * result + ((syscode == null) ? 0 : syscode.hashCode());
 		result = prime * result
 				+ ((totalAmnt == null) ? 0 : totalAmnt.hashCode());
 		result = prime * result
@@ -201,6 +218,11 @@ public class Acc implements Serializable {
 				return false;
 		} else if (!frozeAmnt.equals(other.frozeAmnt))
 			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
 		if (lastCaldate == null) {
 			if (other.lastCaldate != null)
 				return false;
@@ -220,6 +242,11 @@ public class Acc implements Serializable {
 			if (other.subAccno != null)
 				return false;
 		} else if (!subAccno.equals(other.subAccno))
+			return false;
+		if (syscode == null) {
+			if (other.syscode != null)
+				return false;
+		} else if (!syscode.equals(other.syscode))
 			return false;
 		if (totalAmnt == null) {
 			if (other.totalAmnt != null)
@@ -254,6 +281,8 @@ public class Acc implements Serializable {
 		builder.append(totalAmnt);
 		builder.append(", lastCaldate=");
 		builder.append(lastCaldate);
+		builder.append(", syscode=");
+		builder.append(syscode);
 		builder.append(", createTime=");
 		builder.append(createTime);
 		builder.append(", modifyTime=");

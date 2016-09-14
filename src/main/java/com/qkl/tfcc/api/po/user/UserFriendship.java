@@ -40,7 +40,11 @@ public class UserFriendship implements Serializable {
 	 * 用户类型
 	 */
 	private java.lang.String calflag;
-
+	/**
+	 * 系统标识
+	 */
+	private java.lang.String syscode;
+	
 	/**
 	 * 创建时间
 	 */
@@ -50,9 +54,28 @@ public class UserFriendship implements Serializable {
 	 * 修改时间
 	 */
 	private java.util.Date modifyTime;
+	/**
+	 * 操作员
+	 */
+	private java.lang.String operator;
 	
 	
-	
+
+	public java.lang.String getOperator() {
+		return operator;
+	}
+
+	public void setOperator(java.lang.String operator) {
+		this.operator = operator;
+	}
+
+	public java.lang.String getSyscode() {
+		return syscode;
+	}
+
+	public void setSyscode(java.lang.String syscode) {
+		this.syscode = syscode;
+	}
 
 	public java.lang.String getCalflag() {
 		return calflag;
@@ -128,9 +151,12 @@ public class UserFriendship implements Serializable {
 		result = prime * result
 				+ ((modifyTime == null) ? 0 : modifyTime.hashCode());
 		result = prime * result
+				+ ((operator == null) ? 0 : operator.hashCode());
+		result = prime * result
 				+ ((recomuserCode == null) ? 0 : recomuserCode.hashCode());
 		result = prime * result
 				+ ((relaLevel == null) ? 0 : relaLevel.hashCode());
+		result = prime * result + ((syscode == null) ? 0 : syscode.hashCode());
 		result = prime * result
 				+ ((userCode == null) ? 0 : userCode.hashCode());
 		result = prime * result
@@ -162,6 +188,11 @@ public class UserFriendship implements Serializable {
 				return false;
 		} else if (!modifyTime.equals(other.modifyTime))
 			return false;
+		if (operator == null) {
+			if (other.operator != null)
+				return false;
+		} else if (!operator.equals(other.operator))
+			return false;
 		if (recomuserCode == null) {
 			if (other.recomuserCode != null)
 				return false;
@@ -171,6 +202,11 @@ public class UserFriendship implements Serializable {
 			if (other.relaLevel != null)
 				return false;
 		} else if (!relaLevel.equals(other.relaLevel))
+			return false;
+		if (syscode == null) {
+			if (other.syscode != null)
+				return false;
+		} else if (!syscode.equals(other.syscode))
 			return false;
 		if (userCode == null) {
 			if (other.userCode != null)
@@ -198,10 +234,14 @@ public class UserFriendship implements Serializable {
 		builder.append(userType);
 		builder.append(", calflag=");
 		builder.append(calflag);
+		builder.append(", syscode=");
+		builder.append(syscode);
 		builder.append(", createTime=");
 		builder.append(createTime);
 		builder.append(", modifyTime=");
 		builder.append(modifyTime);
+		builder.append(", operator=");
+		builder.append(operator);
 		builder.append("]");
 		return builder.toString();
 	}

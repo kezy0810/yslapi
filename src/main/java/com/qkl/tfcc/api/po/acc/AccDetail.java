@@ -65,6 +65,11 @@ public class AccDetail implements Serializable {
 	private java.lang.String status;
 	
 	/**
+	 * 系统标识
+	 */
+	private java.lang.String syscode;
+	
+	/**
 	 * 创建时间
 	 */
 	private java.util.Date createTime;
@@ -78,6 +83,18 @@ public class AccDetail implements Serializable {
 	 * 操作员
 	 */
 	private java.lang.String operator;
+	
+	
+	
+	
+
+	public java.lang.String getSyscode() {
+		return syscode;
+	}
+
+	public void setSyscode(java.lang.String syscode) {
+		this.syscode = syscode;
+	}
 
 	public java.lang.Integer getId() {
 		return id;
@@ -215,6 +232,7 @@ public class AccDetail implements Serializable {
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result
 				+ ((subAccno == null) ? 0 : subAccno.hashCode());
+		result = prime * result + ((syscode == null) ? 0 : syscode.hashCode());
 		result = prime * result
 				+ ((userCode == null) ? 0 : userCode.hashCode());
 		return result;
@@ -289,6 +307,11 @@ public class AccDetail implements Serializable {
 				return false;
 		} else if (!subAccno.equals(other.subAccno))
 			return false;
+		if (syscode == null) {
+			if (other.syscode != null)
+				return false;
+		} else if (!syscode.equals(other.syscode))
+			return false;
 		if (userCode == null) {
 			if (other.userCode != null)
 				return false;
@@ -320,6 +343,8 @@ public class AccDetail implements Serializable {
 		builder.append(cntflag);
 		builder.append(", status=");
 		builder.append(status);
+		builder.append(", syscode=");
+		builder.append(syscode);
 		builder.append(", createTime=");
 		builder.append(createTime);
 		builder.append(", modifyTime=");

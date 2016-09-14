@@ -19,6 +19,10 @@ public class UnfreezeDetail implements Serializable {
 	 */
 	private java.lang.String userCode;
 	/**
+	 * 账户子类编码
+	 */
+	private java.lang.String subAccno;
+	/**
 	 * 解冻前数量
 	 */
 	private java.math.BigDecimal beforeufNum;
@@ -62,6 +66,18 @@ public class UnfreezeDetail implements Serializable {
 	 * 操作员
 	 */
 	private java.lang.String operator;
+	
+	
+	
+	
+
+	public java.lang.String getSubAccno() {
+		return subAccno;
+	}
+
+	public void setSubAccno(java.lang.String subAccno) {
+		this.subAccno = subAccno;
+	}
 
 	public java.lang.Integer getId() {
 		return id;
@@ -175,6 +191,8 @@ public class UnfreezeDetail implements Serializable {
 				+ ((operator == null) ? 0 : operator.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result
+				+ ((subAccno == null) ? 0 : subAccno.hashCode());
+		result = prime * result
 				+ ((targetSystem == null) ? 0 : targetSystem.hashCode());
 		result = prime * result
 				+ ((unfreezeDate == null) ? 0 : unfreezeDate.hashCode());
@@ -226,6 +244,11 @@ public class UnfreezeDetail implements Serializable {
 				return false;
 		} else if (!status.equals(other.status))
 			return false;
+		if (subAccno == null) {
+			if (other.subAccno != null)
+				return false;
+		} else if (!subAccno.equals(other.subAccno))
+			return false;
 		if (targetSystem == null) {
 			if (other.targetSystem != null)
 				return false;
@@ -259,6 +282,8 @@ public class UnfreezeDetail implements Serializable {
 		StringBuilder builder = new StringBuilder();
 		builder.append("UnfreezeDetail [userCode=");
 		builder.append(userCode);
+		builder.append(", subAccno=");
+		builder.append(subAccno);
 		builder.append(", beforeufNum=");
 		builder.append(beforeufNum);
 		builder.append(", unfreezeNum=");

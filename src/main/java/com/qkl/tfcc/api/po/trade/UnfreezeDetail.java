@@ -19,9 +19,9 @@ public class UnfreezeDetail implements Serializable {
 	 */
 	private java.lang.String userCode;
 	/**
-	 * 账户子类编码
+	 * 账户编码
 	 */
-	private java.lang.String subAccno;
+	private java.lang.String accNo;
 	/**
 	 * 解冻前数量
 	 */
@@ -83,12 +83,14 @@ public class UnfreezeDetail implements Serializable {
 		this.syscode = syscode;
 	}
 
-	public java.lang.String getSubAccno() {
-		return subAccno;
+	
+
+	public java.lang.String getAccNo() {
+		return accNo;
 	}
 
-	public void setSubAccno(java.lang.String subAccno) {
-		this.subAccno = subAccno;
+	public void setAccNo(java.lang.String accNo) {
+		this.accNo = accNo;
 	}
 
 	public java.lang.Integer getId() {
@@ -203,7 +205,7 @@ public class UnfreezeDetail implements Serializable {
 				+ ((operator == null) ? 0 : operator.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result
-				+ ((subAccno == null) ? 0 : subAccno.hashCode());
+				+ ((accNo == null) ? 0 : accNo.hashCode());
 		result = prime * result + ((syscode == null) ? 0 : syscode.hashCode());
 		result = prime * result
 				+ ((targetSystem == null) ? 0 : targetSystem.hashCode());
@@ -257,10 +259,10 @@ public class UnfreezeDetail implements Serializable {
 				return false;
 		} else if (!status.equals(other.status))
 			return false;
-		if (subAccno == null) {
-			if (other.subAccno != null)
+		if (accNo == null) {
+			if (other.accNo != null)
 				return false;
-		} else if (!subAccno.equals(other.subAccno))
+		} else if (!accNo.equals(other.accNo))
 			return false;
 		if (syscode == null) {
 			if (other.syscode != null)
@@ -300,8 +302,8 @@ public class UnfreezeDetail implements Serializable {
 		StringBuilder builder = new StringBuilder();
 		builder.append("UnfreezeDetail [userCode=");
 		builder.append(userCode);
-		builder.append(", subAccno=");
-		builder.append(subAccno);
+		builder.append(", accNo=");
+		builder.append(accNo);
 		builder.append(", beforeufNum=");
 		builder.append(beforeufNum);
 		builder.append(", unfreezeNum=");

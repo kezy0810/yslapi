@@ -145,13 +145,13 @@ public interface UserService {
 	 * 新建用户级别数量表
 	 * @param userLevelcnt
 	 * 
-	 */
+	 *//*
 	public boolean addUserLevCnt(UserLevelcnt userLevelcnt,String versionNo);
-	/**
+	*//**
 	 * 修改用户级别数量表
 	 * @param userLevelcnt
 	 * 
-	 */
-	public boolean modifyUserLevCnt(UserLevelcnt userLevelcnt,String versionNo);
+	 *//*
+	public boolean modifyUserLevCnt(UserLevelcnt userLevelcnt,String versionNo);*/
 	
 }

@@ -6,6 +6,7 @@ import java.util.Map;
 import com.qkl.tfcc.api.po.user.User;
 import com.qkl.tfcc.api.po.user.UserDetail;
 import com.qkl.tfcc.api.po.user.UserFriendship;
+import com.qkl.tfcc.api.po.user.UserLevelcnt;
 
 public interface UserService {
 
@@ -139,4 +140,18 @@ public interface UserService {
      * @return: UserDetail
      */
 	public UserDetail findUserDetailByUserCode(String userCode,String versionNo);
+	
+	/**
+	 * 新建用户级别数量表
+	 * @param userLevelcnt
+	 * 
+	 */
+	public boolean addUserLevCnt(UserLevelcnt userLevelcnt,String versionNo);
+	/**
+	 * 修改用户级别数量表
+	 * @param userLevelcnt
+	 * 
+	 */
+	public boolean modifyUserLevCnt(UserLevelcnt userLevelcnt,String versionNo);
+	
 }

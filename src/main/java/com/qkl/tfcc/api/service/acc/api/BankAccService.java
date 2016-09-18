@@ -16,7 +16,7 @@ public interface BankAccService {
 	
 	
 	
-	
+	public BankAccInfo findBankInfo(String versionNo);
 	
 	
 }

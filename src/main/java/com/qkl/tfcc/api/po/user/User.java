@@ -22,7 +22,10 @@ public class User implements Serializable {
 	 * 用户编码
 	 */
 	private java.lang.String userCode;
-	
+	/**
+	 * 用户名
+	 */
+	private java.lang.String userName;
 	/**
 	 * 手机
 	 */
@@ -355,6 +358,14 @@ public class User implements Serializable {
 		builder.append(modifyTime);
 		builder.append("]");
 		return builder.toString();
+	}
+
+	public java.lang.String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(java.lang.String userName) {
+		this.userName = userName;
 	}
 	
 	

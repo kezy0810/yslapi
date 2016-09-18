@@ -27,16 +27,7 @@ public class UserDetail implements Serializable {
 	 * 登陆账号
 	 */
 	private java.lang.String userName;
-		
-	public java.lang.String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(java.lang.String userName) {
-        this.userName = userName;
-    }
-
-    /**
+  /**
 	 * 姓名
 	 */
 	private java.lang.String realName;
@@ -112,6 +103,12 @@ public class UserDetail implements Serializable {
 	private java.lang.String realStat;
 	
 	/**
+	 * TFCC冻结标识
+	 * 
+	 */
+	private java.lang.String freezeFlag;
+	
+	/**
 	 * 创建时间
 	 */
 	private java.util.Date createTime;
@@ -125,6 +122,27 @@ public class UserDetail implements Serializable {
 	 * 操作员
 	 */
 	private java.lang.String operator;
+	
+	
+	
+	
+	
+	
+	public java.lang.String getFreezeFlag() {
+		return freezeFlag;
+	}
+
+	public void setFreezeFlag(java.lang.String freezeFlag) {
+		this.freezeFlag = freezeFlag;
+	}
+
+	public java.lang.String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(java.lang.String userName) {
+        this.userName = userName;
+    }
 
 	public java.lang.Integer getId() {
 		return id;
@@ -300,6 +318,8 @@ public class UserDetail implements Serializable {
 				+ ((cropName == null) ? 0 : cropName.hashCode());
 		result = prime * result
 				+ ((cropPerson == null) ? 0 : cropPerson.hashCode());
+		result = prime * result
+				+ ((freezeFlag == null) ? 0 : freezeFlag.hashCode());
 		result = prime * result + ((idno == null) ? 0 : idno.hashCode());
 		result = prime * result
 				+ ((imgAddrss == null) ? 0 : imgAddrss.hashCode());
@@ -319,6 +339,8 @@ public class UserDetail implements Serializable {
 				+ ((refPhone == null) ? 0 : refPhone.hashCode());
 		result = prime * result
 				+ ((userCode == null) ? 0 : userCode.hashCode());
+		result = prime * result
+				+ ((userName == null) ? 0 : userName.hashCode());
 		result = prime * result
 				+ ((userType == null) ? 0 : userType.hashCode());
 		result = prime * result + ((wxnum == null) ? 0 : wxnum.hashCode());
@@ -359,6 +381,11 @@ public class UserDetail implements Serializable {
 			if (other.cropPerson != null)
 				return false;
 		} else if (!cropPerson.equals(other.cropPerson))
+			return false;
+		if (freezeFlag == null) {
+			if (other.freezeFlag != null)
+				return false;
+		} else if (!freezeFlag.equals(other.freezeFlag))
 			return false;
 		if (idno == null) {
 			if (other.idno != null)
@@ -415,6 +442,11 @@ public class UserDetail implements Serializable {
 				return false;
 		} else if (!userCode.equals(other.userCode))
 			return false;
+		if (userName == null) {
+			if (other.userName != null)
+				return false;
+		} else if (!userName.equals(other.userName))
+			return false;
 		if (userType == null) {
 			if (other.userType != null)
 				return false;
@@ -440,6 +472,8 @@ public class UserDetail implements Serializable {
 		builder.append(userCode);
 		builder.append(", phone=");
 		builder.append(phone);
+		builder.append(", userName=");
+		builder.append(userName);
 		builder.append(", realName=");
 		builder.append(realName);
 		builder.append(", idno=");
@@ -468,6 +502,8 @@ public class UserDetail implements Serializable {
 		builder.append(userType);
 		builder.append(", realStat=");
 		builder.append(realStat);
+		builder.append(", freezeFlag=");
+		builder.append(freezeFlag);
 		builder.append(", createTime=");
 		builder.append(createTime);
 		builder.append(", modifyTime=");

@@ -14,6 +14,11 @@ public interface TradeService {
 	public boolean modifyTradeDetail(PageData pd,String versionNo);
 	
 	public boolean modifyTradeStatus(PageData pd,String versionNo);
+	
+	
 	public List<PageData> findTradeInfo(Page page,String versionNo);
+	
+	
+	public int findTradeCount(PageData pd,String versionNo);
 	   
 }

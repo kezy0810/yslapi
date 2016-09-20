@@ -35,5 +35,6 @@ public class Constant {
 	public static final int PIC_HEAD_HEIGHT = 122;//用户头像高
     public static final int PIC_HEAD_WIDTH = 122;//用户头像宽
     public static final String PIC_HEAD_PATH = "uploadfile/img/head/";//头像图片
+    public static final String PIC_TEMP_PATH = "uploadtemp/img/head/";//头像图片临时文件路径
     public static final String PIC_QRCODE_PATH = "uploadfile/img/qrcode/";//二维码图片
 }

@@ -61,6 +61,12 @@ public interface UserService {
 	public UserFriendship findUpFriendship(String recomusercode,String versionNo);
 	
 	/**
+	 * 根据手机号查询上级会员
+	 * @param phone
+	 */
+	public UserFriendship findMaxFriendship(String recomusercode,String versionNo);
+	
+	/**
 	 * 新建用户
 	 * @param user
 	 * @param userDetail

@@ -21,6 +21,10 @@ public class BankAccInfo implements Serializable {
 	private java.lang.String orgName;
 	
 	/**
+	 * 
+	 */
+	private java.lang.String payeeName;
+	/**
 	 * 银行账户
 	 */
 	private java.lang.String bankaccno;
@@ -139,6 +143,16 @@ public class BankAccInfo implements Serializable {
 	public void setDepositTime(java.util.Date depositTime) {
 		this.depositTime = depositTime;
 	}
+	
+	
+
+	public java.lang.String getPayeeName() {
+		return payeeName;
+	}
+
+	public void setPayeeName(java.lang.String payeeName) {
+		this.payeeName = payeeName;
+	}
 
 	@Override
 	public int hashCode() {
@@ -159,6 +173,7 @@ public class BankAccInfo implements Serializable {
 		result = prime * result
 				+ ((operator == null) ? 0 : operator.hashCode());
 		result = prime * result + ((orgName == null) ? 0 : orgName.hashCode());
+		result = prime * result + ((payeeName == null) ? 0 : payeeName.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		return result;
 	}
@@ -212,6 +227,16 @@ public class BankAccInfo implements Serializable {
 				return false;
 		} else if (!orgName.equals(other.orgName))
 			return false;
+
+		
+		if (payeeName == null) {
+			if (other.payeeName != null)
+				return false;
+		} else if (!payeeName.equals(other.payeeName))
+			return false;
+		
+
+		
 		if (status == null) {
 			if (other.status != null)
 				return false;
@@ -225,6 +250,8 @@ public class BankAccInfo implements Serializable {
 		StringBuilder builder = new StringBuilder();
 		builder.append("BankaccInfo [orgName=");
 		builder.append(orgName);
+		builder.append(", payeeName=");
+		builder.append(payeeName);
 		builder.append(", bankaccno=");
 		builder.append(bankaccno);
 		builder.append(", depositBankname=");

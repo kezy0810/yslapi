@@ -21,7 +21,7 @@ public interface UnfreezeService {
 	 * @create author kezhiyi
 	 * @create date  2016年9月13日
 	 */ 
-	public boolean addUnfreezeDetail(PageData pd,String versionNo);
+	public boolean addUnfreezeDetail(PageData pd,String versionNo)throws Exception;
 	
 	
 	

@@ -1,5 +1,6 @@
 package com.qkl.tfcc.api.service.acc.api;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -96,7 +97,7 @@ public interface AccService {
      * @param versionNo 版本号
      * @return: void
      */
-    public Map<String,String> rewardTfcc(JSONArray jsonArray,String userCode,String versionNo);
+    public Map<String,String> rewardTfcc(JSONArray jsonArray,String userCode,BigDecimal avbAmnt,String versionNo);
     /**
      * @describe:查询账户明细
      * @author: zhangchunming

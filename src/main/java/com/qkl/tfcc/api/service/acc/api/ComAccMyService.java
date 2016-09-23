@@ -3,6 +3,7 @@ package com.qkl.tfcc.api.service.acc.api;
 
 import java.util.List;
 import java.util.Map;
+
 import com.qkl.tfcc.api.entity.Page;
 import com.qkl.util.help.pager.PageData;
 
@@ -33,4 +34,12 @@ public interface ComAccMyService {
 	 * @return: PageData
 	 */
 	public PageData getAmnt(PageData pd);
+	/**
+	 * @describe:普通会员查询我的账户余额，累计奖励
+	 * @author: zhangchunming
+	 * @date: 2016年9月24日上午1:17:54
+	 * @param userCode
+	 * @return: Map<String,Object>
+	 */
+	public Map<String, Object> findMyAcc(String userCode);
 }

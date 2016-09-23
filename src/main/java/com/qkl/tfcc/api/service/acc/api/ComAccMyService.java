@@ -25,4 +25,12 @@ public interface ComAccMyService {
 	 * @return
 	 */
 	public Map<String, Object> findNum(String userCode);
+	/**
+	 * @describe:查询可用余额，冻结余额，总额
+	 * @author: zhangchunming
+	 * @date: 2016年9月23日上午10:43:42
+	 * @param pd
+	 * @return: PageData
+	 */
+	public PageData getAmnt(PageData pd);
 }

@@ -1,5 +1,6 @@
 package com.qkl.tfcc.api.service.trade.api;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.qkl.tfcc.api.entity.Page;
@@ -20,5 +21,8 @@ public interface TradeService {
 	
 	
 	public int findTradeCount(PageData pd,String versionNo);
+	
+	
+	public BigDecimal findAnmt(String userCode,String versionNo);
 	   
 }

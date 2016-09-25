@@ -107,6 +107,13 @@ public class UserDetail implements Serializable {
 	 * 
 	 */
 	private java.lang.String freezeFlag;
+	/**
+	 * TFCC冻结标识
+	 * 
+	 */
+	private java.lang.String buyFlag;
+	
+	
 	
 	/**
 	 * 创建时间
@@ -128,6 +135,14 @@ public class UserDetail implements Serializable {
 	
 	
 	
+	public java.lang.String getBuyFlag() {
+		return buyFlag;
+	}
+
+	public void setBuyFlag(java.lang.String buyFlag) {
+		this.buyFlag = buyFlag;
+	}
+
 	public java.lang.String getFreezeFlag() {
 		return freezeFlag;
 	}
@@ -312,6 +327,7 @@ public class UserDetail implements Serializable {
 				+ ((bankaccno == null) ? 0 : bankaccno.hashCode());
 		result = prime * result
 				+ ((branchName == null) ? 0 : branchName.hashCode());
+		result = prime * result + ((buyFlag == null) ? 0 : buyFlag.hashCode());
 		result = prime * result
 				+ ((createTime == null) ? 0 : createTime.hashCode());
 		result = prime * result
@@ -366,6 +382,11 @@ public class UserDetail implements Serializable {
 			if (other.branchName != null)
 				return false;
 		} else if (!branchName.equals(other.branchName))
+			return false;
+		if (buyFlag == null) {
+			if (other.buyFlag != null)
+				return false;
+		} else if (!buyFlag.equals(other.buyFlag))
 			return false;
 		if (createTime == null) {
 			if (other.createTime != null)
@@ -504,6 +525,8 @@ public class UserDetail implements Serializable {
 		builder.append(realStat);
 		builder.append(", freezeFlag=");
 		builder.append(freezeFlag);
+		builder.append(", buyFlag=");
+		builder.append(buyFlag);
 		builder.append(", createTime=");
 		builder.append(createTime);
 		builder.append(", modifyTime=");

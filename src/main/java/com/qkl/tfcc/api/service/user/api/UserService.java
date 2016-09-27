@@ -108,7 +108,7 @@ public interface UserService {
 	 * @param userCode
 	 * @param password
 	 */
-	public boolean modifyPhone(String userCode,String phone,String versionNo);
+	public boolean modifyPhone(String userCode,String phone,String oldPhone,String versionNo);
 	
 	/**
 	 * 修改用户资料

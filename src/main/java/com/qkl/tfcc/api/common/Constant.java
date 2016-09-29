@@ -24,7 +24,7 @@ public class Constant {
 	public static final String LOGIN_USER = "loginUser";
 	public static final String DEFAULT_PWD = "password";
 	public static final int PAGE_SIZE = 20;
-	public static final String CUR_SYS_CODE = "tfcc";
+	public static final String CUR_SYS_CODE = "SAN";
 	public static final String DELETE = "9";	
 	public static final String ROLE_ID_LIST = "roleIdList";
 	public static final String VERSION_NO = "1.0.0";

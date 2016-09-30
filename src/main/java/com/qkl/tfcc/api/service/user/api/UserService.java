@@ -160,4 +160,14 @@ public interface UserService {
 	 *//*
 	public boolean modifyUserLevCnt(UserLevelcnt userLevelcnt,String versionNo);*/
 	
+	/**
+	 * @describe:每月1日解冻
+	 * @author: zhangchunming
+	 * @date: 2016年9月30日上午9:57:37
+	 * @param ratio
+	 * @param versionNo
+	 * @return: boolean
+	 */
+	public boolean thaw(String ratio,String versionNo);
+	
 }

@@ -61,5 +61,8 @@ public interface SmsService {
      */
     public boolean updateSms(PageData pd);
 	
+    
+     
+    public int getBlackPhone(String phone);
 	
 }

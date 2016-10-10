@@ -42,4 +42,11 @@ public interface ComAccMyService {
 	 * @return: Map<String,Object>
 	 */
 	public Map<String, Object> findMyAcc(String userCode);
+	
+	/**
+	 * 保存转帐信息
+	 * @param pd
+	 * @return
+	 */
+	public int saveOutAcc(PageData pd);
 }

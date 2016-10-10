@@ -156,6 +156,9 @@ public interface CodeConstant {
 	/**
 	 * 手机号格式错误
 	 */
-	public final short  MOBILE_ERROR =-32;		
-	
+	public final short  MOBILE_ERROR =-32;	
+	/**
+	 * 签名验证失败
+	 */
+	public final short  SIGN_ERROR =-33;     
 }

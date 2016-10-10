@@ -30,7 +30,14 @@ public interface AccOutdetailService {
 	 */ 
 	public boolean modifyAccOutdetailStatus(PageData pd,String versionNo);
 	
-	
-	
+	/**
+	 * @describe:转账回调
+	 * @author: zhangchunming
+	 * @date: 2016年10月10日上午10:56:06
+	 * @param pd
+	 * @param versionNo
+	 * @return: boolean
+	 */
+	public boolean transferCallBack(PageData pd,String versionNo);
 	
 }

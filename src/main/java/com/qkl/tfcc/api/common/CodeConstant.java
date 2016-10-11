@@ -160,5 +160,9 @@ public interface CodeConstant {
 	/**
 	 * 签名验证失败
 	 */
-	public final short  SIGN_ERROR =-33;     
+	public final short  SIGN_ERROR =-33;   
+	/**
+	 * 系统异常
+	 */
+	public final short  SYS_ERROR =-34;     
 }

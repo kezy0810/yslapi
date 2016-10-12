@@ -56,5 +56,5 @@ public interface ComAccMyService {
 	 * @param page
 	 * @return
 	 */
-	public List<PageData> findAccOutList(Page page);
+	public List<PageData> listPageAccOut(Page page,String versionNo);
 }

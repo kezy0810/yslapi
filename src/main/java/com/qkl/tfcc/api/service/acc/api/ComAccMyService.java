@@ -49,4 +49,12 @@ public interface ComAccMyService {
 	 * @return
 	 */
 	public int saveOutAcc(PageData pd);
+	
+	
+	/***
+	 * 查询转账信息
+	 * @param page
+	 * @return
+	 */
+	public List<PageData> findAccOutList(Page page);
 }

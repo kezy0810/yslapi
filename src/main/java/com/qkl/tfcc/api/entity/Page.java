@@ -151,9 +151,8 @@ public class Page {
 			
 			//调整每页显示条数
 			sb.append("function changeCount(value){");
-//			sb.append(" window.parent.jzts();");
 			sb.append("	if(true && document.forms[0]){\n");
-			sb.append("		var url = document.forms[0].getAttribute(\"action\");\n");
+			sb.append("		url = document.forms[0].getAttribute(\"action\");\n");
 			sb.append("		if(url.indexOf('?')>-1){url += \"&"+(entityOrField?"currentPage":"page.currentPage")+"=\";}\n");
 			sb.append("		else{url += \"?"+(entityOrField?"currentPage":"page.currentPage")+"=\";}\n");
 			sb.append("		url = url + \"1&" +(entityOrField?"showCount":"page.showCount")+"=\"+value;\n");

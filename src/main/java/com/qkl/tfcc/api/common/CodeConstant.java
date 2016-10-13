@@ -165,4 +165,12 @@ public interface CodeConstant {
 	 * 系统异常
 	 */
 	public final short  SYS_ERROR =-34;     
+	
+	public final String PERMISSION_DENIED = "权限不足";
+	
+	public final String INVALID_PARAMS = "交易参数错误";
+	
+	public final String NOT_ENOUGH_BALANCE = "余额不足";
+	
+	public final String USER_NOT_FOUND = "发送人账号不存在";
 }

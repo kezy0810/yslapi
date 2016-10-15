@@ -1,5 +1,8 @@
 package com.qkl.tfcc.api.common;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public interface CodeConstant {
 
 	/**
@@ -166,11 +169,17 @@ public interface CodeConstant {
 	 */
 	public final short  SYS_ERROR =-34;     
 	
-	public final String PERMISSION_DENIED = "权限不足";
+	public final String PERMISSION_DENIED = "您的权限不足";
 	
-	public final String INVALID_PARAMS = "交易参数错误";
+	public final Map<String, String> INVALID_PARAMS = new HashMap<String, String>(){
+	    {
+	        put("invalid params", "请求参数有误");  
+	        put("sender and receiver must be different", "转账账户和接收账户不能相同");  
+	        put("receiver not found", "接收账户未找到");  
+	    }
+	};
 	
 	public final String NOT_ENOUGH_BALANCE = "余额不足";
 	
-	public final String USER_NOT_FOUND = "发送人账号不存在";
+	public final String USER_NOT_FOUND = "未找到转账用户";
 }

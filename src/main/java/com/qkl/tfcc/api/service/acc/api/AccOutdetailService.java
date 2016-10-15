@@ -39,5 +39,41 @@ public interface AccOutdetailService {
 	 * @return: boolean
 	 */
 	public boolean transferCallBack(PageData pd,String versionNo);
+	/**
+	 * @describe:根据订单号查询相关转账信息
+	 * @author: zhangchunming
+	 * @date: 2016年10月14日下午2:53:40
+	 * @param orderId
+	 * @param versionNo
+	 * @return: PageData
+	 */
+	public PageData getTurnOutInfo(String orderId,String versionNo);
+	/**
+	 * @describe:转出失败回滚数据
+	 * @author: zhangchunming
+	 * @date: 2016年10月14日下午11:16:25
+	 * @param orderId
+	 * @param versionNo
+	 * @return: boolean
+	 */
+	public boolean turnOutBack(PageData pd ,String versionNo);
+	/**
+	 * @describe:转出成功，更新转出记录状态
+	 * @author: zhangchunming
+	 * @date: 2016年10月14日下午11:25:33
+	 * @param pd
+	 * @param versionNo
+	 * @return: boolean
+	 */
+	public boolean turnOutUpdate(PageData pd ,String versionNo);
+	/**
+	 * @describe:查询是否有转账中
+	 * @author: zhangchunming
+	 * @date: 2016年10月15日上午11:37:16
+	 * @param userCode
+	 * @param versionNo
+	 * @return: boolean
+	 */
+	public boolean findIsExistTransfering(String userCode,String versionNo);
 	
 }

@@ -2,7 +2,7 @@ package com.qkl.tfcc.api.entity;
 
 import java.util.List;
 
-import com.qkl.util.help.Page;
+import com.qkl.util.help.Page_bk;
 
 /**
  * 带分页、list页面数据的对象
@@ -16,7 +16,7 @@ import com.qkl.util.help.Page;
  * @date 2015年4月18日
  * @version v1.0
  */
-public class PageDataYC extends Page {
+public class PageDataYC extends Page_bk {
 
 	/**
 	 * 列表需要显示的数据
